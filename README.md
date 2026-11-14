@@ -11,6 +11,7 @@ Live at **[dungphanx.github.io](https://dungphanx.github.io/)**.
 - [Next.js](https://nextjs.org) 16 (App Router), React 19, TypeScript
 - Static export (`output: "export"`) served on GitHub Pages via Actions
 - Type set in General Sans, on a warm paper palette with one coral accent
+- Light and dark mode, following the system preference with a toggle that persists
 
 ## Run locally
 

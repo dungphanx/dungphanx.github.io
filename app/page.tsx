@@ -1,3 +1,5 @@
+import ThemeToggle from "./theme-toggle";
+
 export default function Page() {
   return (
     <>
@@ -10,13 +12,16 @@ export default function Page() {
           <a className="brand" href="#top" aria-label="Dung Phan, back to top">
             Dung Phan
           </a>
-          <nav className="nav__links" aria-label="Primary">
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-            <a className="nav__email" href="mailto:dungphanx@gmail.com">
-              Email
-            </a>
-          </nav>
+          <div className="nav__right">
+            <nav className="nav__links" aria-label="Primary">
+              <a href="#experience">Experience</a>
+              <a href="#contact">Contact</a>
+              <a className="nav__email" href="mailto:dungphanx@gmail.com">
+                Email
+              </a>
+            </nav>
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 
@@ -52,9 +57,9 @@ export default function Page() {
               <p>
                 I am a technical lead at Money Forward Vietnam. I joined in July
                 2023 to lead Account Payable, and built that team from zero to
-                more than ten engineers. In September 2025 I started the Product
-                VN team for Cloud Expense and lead it with Money Forward Group in
-                Japan.
+                more than ten engineers. In September 2025 I started the EX MFV
+                team for Cloud Expense and lead it with Money Forward Group in
+                Japan. We are five developers now.
               </p>
               <p>
                 Both products sit at the top of Money Forward Group revenue. I
@@ -157,8 +162,8 @@ export default function Page() {
               </li>
             </ul>
             <p className="contact__note">
-              Ho Chi Minh City, Vietnam. We are growing the Product VN team for
-              Cloud Expense and looking for Principal Engineers.
+              Ho Chi Minh City, Vietnam. We are growing the team for Cloud
+              Expense and looking for Principal Engineers.
             </p>
           </div>
         </section>
