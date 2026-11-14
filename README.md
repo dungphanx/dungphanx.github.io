@@ -10,7 +10,7 @@ Live at **[dungphanx.github.io](https://dungphanx.github.io/)**.
 
 - [Next.js](https://nextjs.org) 16 (App Router), React 19, TypeScript
 - Static export (`output: "export"`) served on GitHub Pages via Actions
-- Type set in Chakra Petch, IBM Plex Sans and IBM Plex Mono
+- Type set in General Sans, on a warm paper palette with one coral accent
 
 ## Run locally
 
