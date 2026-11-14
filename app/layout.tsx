@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dung Phan — Technical Lead, Ho Chi Minh City",
+  title: "Dung Phan — Technical Lead, Cloud Expense at Money Forward",
   description:
-    "Dung Phan is a technical lead with ten years shipping Ruby on Rails and React systems that move money, now leading an Account Payable product at Money Forward.",
+    "Dung Phan is a technical lead at Money Forward Vietnam. He built the Account Payable team from zero and now leads the Product VN team for Cloud Expense.",
   icons: {
     icon: "/favicon.svg",
   },
@@ -25,7 +25,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>

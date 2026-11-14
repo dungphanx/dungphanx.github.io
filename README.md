@@ -1,7 +1,8 @@
 # Dung Phan — Portfolio
 
-Personal portfolio site for **Dung Phan**, a technical lead in Ho Chi Minh City with ten
-years shipping Ruby on Rails and React systems that move money.
+Personal portfolio site for **Dung Phan**, a technical lead at Money Forward Vietnam who
+built the Account Payable team from zero and now leads the Product VN team for Cloud
+Expense.
 
 Live at **[dungphanx.github.io](https://dungphanx.github.io/)**.
 
