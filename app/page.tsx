@@ -7,166 +7,171 @@ export default function Page() {
 
       <header className="nav">
         <div className="container nav__inner">
-          <a className="wordmark" href="#top" aria-label="Dung Phan, back to top">
-            Dung Phan
+          <a className="brand" href="#top" aria-label="Dung Phan, back to top">
+            <span className="brand__mark" aria-hidden="true">
+              DP
+            </span>
+            <span className="brand__name">Dung Phan</span>
           </a>
           <nav className="nav__links" aria-label="Primary">
+            <a href="#about">About</a>
             <a href="#experience">Experience</a>
-            <a href="#numbers">Numbers</a>
-            <a href="#capabilities">Capabilities</a>
+            <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
           </nav>
-          <a className="btn btn--quiet nav__action" href="mailto:dungphanx@gmail.com">
+          <a className="btn btn--sm nav__action" href="mailto:dungphanx@gmail.com">
             Email me
           </a>
         </div>
       </header>
 
       <main id="main">
-        <section className="hero" id="top" aria-label="Introduction">
-          <div className="container hero__inner">
-            <div className="hero__text">
-              <h1>Dung Phan</h1>
-              <p className="lead">
-                Technical lead, ten years shipping Rails and React systems that
-                move money.
-              </p>
-              <div className="hero__actions">
-                <a className="btn" href="mailto:dungphanx@gmail.com">
-                  Email me
-                </a>
-                <a className="btn btn--quiet" href="#experience">
-                  See the work
-                </a>
-              </div>
+        <section className="hero" id="top">
+          <div className="container">
+            <div className="avatar" aria-hidden="true">
+              DP
             </div>
-
-            <figure className="spec">
-              <p className="spec__value">
-                <span className="num">10+</span>{" "}
-                <span className="spec__unit">years</span>
-              </p>
-              <div className="spec__span">
-                <div className="dim" aria-hidden="true" />
-                <div className="spec__ends">
-                  <span className="num">2012</span>
-                  <span className="num">now</span>
-                </div>
-              </div>
-              <figcaption className="spec__caption">
-                Professional experience
-              </figcaption>
-            </figure>
+            <h1>Dung Phan</h1>
+            <p className="hero__role">
+              Technical Lead at Money Forward, Ho Chi Minh City
+            </p>
+            <p className="lead hero__lead">
+              Ten years shipping Ruby on Rails and React systems that move
+              money.
+            </p>
+            <div className="hero__actions">
+              <a className="btn" href="mailto:dungphanx@gmail.com">
+                Email me
+              </a>
+              <a className="btn btn--ghost" href="#experience">
+                See my work
+              </a>
+            </div>
+            <p className="hero__meta">
+              Open to senior and lead roles, in Ho Chi Minh City or remote.
+            </p>
           </div>
         </section>
 
-        <section className="section section--lead" id="experience" aria-labelledby="experience-h">
+        <section className="section" id="about">
           <div className="container">
             <div className="section__head">
-              <h2 id="experience-h">Ten years across seven roles</h2>
+              <h2>About</h2>
             </div>
-            <ol className="register">
-              <li className="register__row">
-                <span className="register__no num">01</span>
-                <div className="register__main">
-                  <h3>Tech lead</h3>
-                  <span className="register__co">Money Forward Vietnam</span>
-                  <p className="register__note">
+            <div className="about">
+              <p className="lead">
+                I am Dung Phan, a technical lead who turns product requirements
+                into systems people rely on.
+              </p>
+              <p>
+                I lead a nine-person team at Money Forward, building a top
+                Account Payable product for Japan. Before that I split
+                Coinhako&rsquo;s monolith into microservices and led teams of up
+                to eight at Symphony Creative Solution. Ten years across
+                fintech and logistics, from Ruby on Rails to React and
+                TypeScript.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section--tint" id="experience">
+          <div className="container">
+            <div className="section__head">
+              <h2>Experience</h2>
+              <p className="lead">Seven roles since 2012.</p>
+            </div>
+            <ol className="timeline">
+              <li className="job">
+                <span className="job__period">2023 to present</span>
+                <div className="job__body">
+                  <h3>Technical Lead</h3>
+                  <p className="job__org">Money Forward Vietnam, Ho Chi Minh City</p>
+                  <p className="job__desc">
                     Leads a nine-person team on a top Account Payable product in
-                    Japan.
+                    Japan. Set the development process, do the technical
+                    roadmap, and ship the releases.
                   </p>
                 </div>
-                <time className="register__years num">2023 to now</time>
               </li>
-              <li className="register__row">
-                <span className="register__no num">02</span>
-                <div className="register__main">
-                  <h3>Senior software developer</h3>
-                  <span className="register__co">Freelance</span>
+              <li className="job">
+                <span className="job__period">2023</span>
+                <div className="job__body">
+                  <h3>Senior Software Developer</h3>
+                  <p className="job__org">Freelance, Vietnam</p>
                 </div>
-                <time className="register__years num">2023</time>
               </li>
-              <li className="register__row">
-                <span className="register__no num">03</span>
-                <div className="register__main">
-                  <h3>Senior fullstack developer</h3>
-                  <span className="register__co">Coinhako, Singapore</span>
-                  <p className="register__note">
-                    Split the monolith into microservices; Employee of the
-                    Quarter three times.
+              <li className="job">
+                <span className="job__period">2020 to 2022</span>
+                <div className="job__body">
+                  <h3>Senior Fullstack Developer</h3>
+                  <p className="job__org">Coinhako, Singapore</p>
+                  <p className="job__desc">
+                    Drove the monolith-to-microservices split on
+                    Singapore&rsquo;s leading crypto exchange, and built the
+                    identity-verification features for MAS compliance. Employee
+                    of the Quarter three times.
                   </p>
                 </div>
-                <time className="register__years num">2020 to 2022</time>
               </li>
-              <li className="register__row">
-                <span className="register__no num">04</span>
-                <div className="register__main">
-                  <h3>Senior fullstack, Scrum master</h3>
-                  <span className="register__co">Freelance</span>
+              <li className="job">
+                <span className="job__period">2019 to 2020</span>
+                <div className="job__body">
+                  <h3>Senior Fullstack Developer, Scrum Master</h3>
+                  <p className="job__org">Freelance, Vietnam</p>
                 </div>
-                <time className="register__years num">2019 to 2020</time>
               </li>
-              <li className="register__row">
-                <span className="register__no num">05</span>
-                <div className="register__main">
-                  <h3>Team leader</h3>
-                  <span className="register__co">
-                    Symphony Creative Solution, Singapore
-                  </span>
-                  <p className="register__note">
-                    Led teams up to eight on logistics port projects; Project of
-                    the Year twice.
+              <li className="job">
+                <span className="job__period">2016 to 2019</span>
+                <div className="job__body">
+                  <h3>Team Leader</h3>
+                  <p className="job__org">Symphony Creative Solution, Singapore</p>
+                  <p className="job__desc">
+                    Led teams of up to eight on two logistics port projects,
+                    coordinating clients across Japan, the USA and Korea.
+                    Project of the Year twice.
                   </p>
                 </div>
-                <time className="register__years num">2016 to 2019</time>
               </li>
-              <li className="register__row">
-                <span className="register__no num">06</span>
-                <div className="register__main">
-                  <h3>Database developer</h3>
-                  <span className="register__co">Asian Live Tech</span>
+              <li className="job">
+                <span className="job__period">2015 to 2016</span>
+                <div className="job__body">
+                  <h3>Database Developer</h3>
+                  <p className="job__org">Asian Live Tech, Asia-Pacific</p>
                 </div>
-                <time className="register__years num">2015 to 2016</time>
               </li>
-              <li className="register__row">
-                <span className="register__no num">07</span>
-                <div className="register__main">
-                  <h3>Software developer</h3>
-                  <span className="register__co">Ciiva.com, Switzerland</span>
+              <li className="job">
+                <span className="job__period">2012 to 2015</span>
+                <div className="job__body">
+                  <h3>Software Developer</h3>
+                  <p className="job__org">Ciiva.com, Switzerland</p>
                 </div>
-                <time className="register__years num">2012 to 2015</time>
               </li>
             </ol>
           </div>
         </section>
 
-        <section className="section section--band" id="numbers" aria-labelledby="numbers-h">
+        <section className="section" id="highlights">
           <div className="container">
             <div className="section__head">
-              <h2 id="numbers-h">Numbers, with their units</h2>
+              <h2>Highlights</h2>
             </div>
-            <div className="figures">
-              <div className="figures__item">
-                <p className="figures__value num">
-                  ¥100M<span className="figures__unit">+</span>
-                </p>
-                <p className="figures__label">
+            <div className="highlights">
+              <div className="stat">
+                <p className="stat__value">¥100M+</p>
+                <p className="stat__label">
                   monthly revenue on the Account Payable product I lead
                 </p>
               </div>
-              <div className="figures__item">
-                <p className="figures__value num">
-                  3<span className="figures__unit">×</span>
-                </p>
-                <p className="figures__label">
+              <div className="stat">
+                <p className="stat__value">3×</p>
+                <p className="stat__label">
                   Employee of the Quarter, consecutive, at Coinhako
                 </p>
               </div>
-              <div className="figures__item">
-                <p className="figures__value num">
-                  2<span className="figures__unit">×</span>
-                </p>
-                <p className="figures__label">
+              <div className="stat">
+                <p className="stat__value">2×</p>
+                <p className="stat__label">
                   Project of the Year at Symphony Creative Solution
                 </p>
               </div>
@@ -174,68 +179,84 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="section" id="capabilities" aria-labelledby="capabilities-h">
+        <section className="section" id="skills">
           <div className="container">
             <div className="section__head">
-              <h2 id="capabilities-h">What I ship</h2>
+              <h2>Skills</h2>
             </div>
-            <dl className="caps">
-              <div className="caps__row">
-                <dt>Backend</dt>
-                <dd>Ruby on Rails, Node.js, REST, GraphQL</dd>
+            <div className="skills">
+              <div className="skill">
+                <h3 className="skill__name">Backend</h3>
+                <ul className="skill__tags">
+                  <li>Ruby on Rails</li>
+                  <li>Node.js</li>
+                  <li>REST</li>
+                  <li>GraphQL</li>
+                  <li>PostgreSQL</li>
+                </ul>
               </div>
-              <div className="caps__row">
-                <dt>Frontend</dt>
-                <dd>React, Next.js, TypeScript</dd>
+              <div className="skill">
+                <h3 className="skill__name">Frontend</h3>
+                <ul className="skill__tags">
+                  <li>React</li>
+                  <li>Next.js</li>
+                  <li>TypeScript</li>
+                </ul>
               </div>
-              <div className="caps__row">
-                <dt>Architecture</dt>
-                <dd>Microservices, AWS, PostgreSQL</dd>
+              <div className="skill">
+                <h3 className="skill__name">Architecture</h3>
+                <ul className="skill__tags">
+                  <li>AWS</li>
+                  <li>Microservices</li>
+                </ul>
               </div>
-              <div className="caps__row">
-                <dt>Leadership</dt>
-                <dd>Teams up to nine, DoD, GitHub Flow</dd>
+              <div className="skill">
+                <h3 className="skill__name">Leadership</h3>
+                <ul className="skill__tags">
+                  <li>Team leadership</li>
+                  <li>Definition of Done</li>
+                  <li>GitHub Flow</li>
+                  <li>Code review</li>
+                </ul>
               </div>
-            </dl>
+            </div>
           </div>
         </section>
 
-        <section className="section section--close" id="contact" aria-labelledby="contact-h">
+        <section className="section" id="contact">
           <div className="container">
             <div className="section__head">
-              <h2 id="contact-h">Talk to me</h2>
+              <h2>Let&rsquo;s talk</h2>
               <p className="lead">
-                Open to senior and lead roles, Ho Chi Minh City or remote.
+                Open to senior and lead roles in Ho Chi Minh City or remote.
               </p>
             </div>
-            <div className="titleblock">
-              <div className="titleblock__cell">
-                <span className="titleblock__label">Email</span>
-                <a href="mailto:dungphanx@gmail.com">dungphanx@gmail.com</a>
-              </div>
-              <div className="titleblock__cell">
-                <span className="titleblock__label">Phone</span>
-                <a href="tel:+84933842933">+84 933 842 933</a>
-              </div>
-              <div className="titleblock__cell">
-                <span className="titleblock__label">LinkedIn</span>
-                <a
-                  href="https://www.linkedin.com/in/dungphanx/"
-                  rel="noreferrer"
-                >
-                  linkedin.com/in/dungphanx
-                </a>
-              </div>
-              <div className="titleblock__cell">
-                <span className="titleblock__label">GitHub</span>
-                <a href="https://github.com/dungphanx" rel="noreferrer">
-                  github.com/dungphanx
-                </a>
-              </div>
-              <div className="titleblock__cell titleblock__cell--wide">
-                <span className="titleblock__label">Location</span>
-                <span>Ho Chi Minh City, Vietnam</span>
-              </div>
+            <div className="contact">
+              <a className="contact__email" href="mailto:dungphanx@gmail.com">
+                dungphanx@gmail.com
+              </a>
+              <ul className="contact__list">
+                <li>
+                  <span className="contact__label">Phone</span>
+                  <a href="tel:+84933842933">+84 933 842 933</a>
+                </li>
+                <li>
+                  <span className="contact__label">LinkedIn</span>
+                  <a href="https://www.linkedin.com/in/dungphanx/" rel="noreferrer">
+                    linkedin.com/in/dungphanx
+                  </a>
+                </li>
+                <li>
+                  <span className="contact__label">GitHub</span>
+                  <a href="https://github.com/dungphanx" rel="noreferrer">
+                    github.com/dungphanx
+                  </a>
+                </li>
+                <li>
+                  <span className="contact__label">Location</span>
+                  <span>Ho Chi Minh City, Vietnam</span>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
@@ -243,17 +264,8 @@ export default function Page() {
 
       <footer className="footer">
         <div className="container footer__inner">
-          <p className="footer__mark">Dung Phan</p>
-          <nav className="footer__links" aria-label="Footer">
-            <a href="https://github.com/dungphanx" rel="noreferrer">
-              GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/dungphanx/" rel="noreferrer">
-              LinkedIn
-            </a>
-            <a href="mailto:dungphanx@gmail.com">Email</a>
-          </nav>
-          <p className="footer__line">Ho Chi Minh City, Vietnam</p>
+          <span className="footer__name">Dung Phan</span>
+          <span className="footer__line">Ho Chi Minh City, Vietnam</span>
         </div>
       </footer>
     </>
