@@ -143,6 +143,10 @@
 .section {
   padding-block: var(--section-gap);
 }
+/* the hero's own bottom padding is the gap; don't stack a section gap on it */
+.hero + .section {
+  padding-top: 0;
+}
 .section h2 {
   font-size: var(--text-2xl);
   margin-bottom: var(--space-xl);
@@ -247,6 +251,9 @@
 
 /* responsive */
 @media (max-width: 40rem) {
+  .hero {
+    padding-bottom: var(--space-2xl);
+  }
   .nav__links a:not(.nav__email) {
     display: none;
   }
