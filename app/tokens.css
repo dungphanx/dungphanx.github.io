@@ -42,3 +42,21 @@
   --accent-word-mark: light-dark(var(--color-accent), transparent);
   --accent-word-color: light-dark(var(--color-ink), var(--color-accent));
 }
+
+/* Browsers without light-dark() (Safari < 17.5, Chrome < 123): light palette only. */
+@supports not (color: light-dark(#000, #fff)) {
+  :root {
+    --color-paper: #e5e5e5;
+    --color-card: #ffffff;
+    --color-sunk: #f5f5f5;
+    --color-ink: #111111;
+    --color-ink-2: #262626;
+    --color-muted: #5f6672;
+    --color-rule: #e5e5e5;
+    --color-accent-text: #8a5d00;
+    --color-focus: #111111;
+    --accent-word-mark: var(--color-accent);
+    --accent-word-color: var(--color-ink);
+  }
+  .theme-toggle .icon-sun { display: none; }
+}

@@ -24,5 +24,5 @@ export function contactLinks(phoneLabel: string): ContactLink[] {
   ];
 }
 
-/** The round icon buttons under the avatar: the first three contact links. */
-export const socialLinks = contactLinks("").slice(0, 3);
+/** The round icon buttons under the avatar: every contact link except the phone. */
+export const socialLinks = contactLinks("").filter((l) => l.icon !== "phone");
