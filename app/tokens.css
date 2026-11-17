@@ -1,7 +1,13 @@
 /* Palette after the owner's earlier page (nextjs-two-bice-59.vercel.app):
- * grey canvas, white cards, black type, one yellow accent (#FFB400). */
+ * grey canvas, white cards, black type, one yellow accent (#FFB400).
+ *
+ * Each colour is written once as light-dark(light, dark). The scheme follows the
+ * system unless the theme toggle has set data-mode on <html>. */
+:root { color-scheme: light dark; }
+:root[data-mode="light"] { color-scheme: light; }
+:root[data-mode="dark"] { color-scheme: dark; }
+
 :root {
-  color-scheme: light;
   --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px;
   --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.125rem; --text-xl: 1.375rem;
   --text-display: clamp(2.25rem, 2.6vw + 1.25rem, 3.5rem);
@@ -16,49 +22,23 @@
   --display-weight: 700;
   --tracking-display: -0.02em;
 
-  --sidebar: 300px; --rail: 96px; --content: 860px;
+  --sidebar: 300px; --rail: 96px; --content: 860px; --bottom-bar: 72px;
   --radius-card: 4px; --radius-pill: 999px;
 
-  --color-paper: #e5e5e5;        /* canvas */
-  --color-card: #ffffff;
-  --color-sunk: #f5f5f5;         /* tag and track fill on a card */
-  --color-ink: #111111;
-  --color-ink-2: #262626;
-  --color-muted: #5f6672;        /* 5.6:1 on white */
-  --color-rule: #e5e5e5;
-  --color-accent: #ffb400;       /* fills: buttons, labels, active rail */
-  --color-accent-ink: #111111;   /* type on the accent, 11:1 */
-  --color-accent-text: #8a5d00;  /* accent as type on white, 5.5:1 */
-  --color-focus: #111111;
-  --color-success: #3f7d0e;
-}
+  --color-accent: #ffb400;                                   /* fills: buttons, labels, active rail */
+  --color-accent-ink: #111111;                               /* type on the accent, 11:1 */
+  --color-paper: light-dark(#e5e5e5, #0f1012);               /* canvas */
+  --color-card: light-dark(#ffffff, #1a1b1e);
+  --color-sunk: light-dark(#f5f5f5, #24262a);                /* tag and track fill on a card */
+  --color-ink: light-dark(#111111, #f2f2f2);
+  --color-ink-2: light-dark(#262626, #d9d9d9);
+  --color-muted: light-dark(#5f6672, #a3a8b2);               /* 5.6:1 on white */
+  --color-rule: light-dark(#e5e5e5, #2b2d31);
+  --color-accent-text: light-dark(#8a5d00, #ffb400);         /* accent as type, 5.5:1 on white */
+  --color-focus: light-dark(#111111, #ffb400);
 
-[data-mode="dark"] {
-  color-scheme: dark;
-  --color-paper: #0f1012;
-  --color-card: #1a1b1e;
-  --color-sunk: #24262a;
-  --color-ink: #f2f2f2;
-  --color-ink-2: #d9d9d9;
-  --color-muted: #a3a8b2;
-  --color-rule: #2b2d31;
-  --color-accent-text: #ffb400;
-  --color-focus: #ffb400;
-  --color-success: #8fcf4c;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-mode]) {
-    color-scheme: dark;
-    --color-paper: #0f1012;
-    --color-card: #1a1b1e;
-    --color-sunk: #24262a;
-    --color-ink: #f2f2f2;
-    --color-ink-2: #d9d9d9;
-    --color-muted: #a3a8b2;
-    --color-rule: #2b2d31;
-    --color-accent-text: #ffb400;
-    --color-focus: #ffb400;
-    --color-success: #8fcf4c;
-  }
+  /* Hero accent word: a yellow highlighter stroke in light mode (yellow type on
+     white fails contrast), plain yellow type in dark mode. */
+  --accent-word-mark: light-dark(var(--color-accent), transparent);
+  --accent-word-color: light-dark(var(--color-ink), var(--color-accent));
 }
