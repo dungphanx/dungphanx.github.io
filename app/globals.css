@@ -99,7 +99,7 @@
 
 .side-block { display: flex; flex-direction: column; gap: var(--space-sm); }
 .side-block + .side-block { padding-top: var(--space-lg); border-top: 1px solid var(--color-rule); }
-.side-heading { font-size: var(--text-md); font-weight: 600; letter-spacing: 0; }
+.side-heading { font-size: var(--text-md); font-weight: 600; line-height: 1.15; }
 
 .langs { display: flex; flex-direction: column; gap: var(--space-xs); font-size: var(--text-sm); }
 .langs li { display: flex; justify-content: space-between; gap: var(--space-sm); }
@@ -108,6 +108,7 @@
 .skill-group { display: flex; flex-direction: column; gap: var(--space-xs); }
 .skill-group + .skill-group { margin-top: var(--space-xs); }
 .skill-group__name {
+  line-height: 1.15;
   font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -182,13 +183,10 @@
 .rail__link:hover .rail__label,
 .rail__link:focus-visible .rail__label { opacity: 1; }
 
-.theme-toggle .icon-sun { display: none; }
-[data-mode="dark"] .theme-toggle .icon-sun { display: block; }
-[data-mode="dark"] .theme-toggle .icon-moon { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-mode]) .theme-toggle .icon-sun { display: block; }
-  :root:not([data-mode]) .theme-toggle .icon-moon { display: none; }
-}
+/* both icons share one cell; the scheme decides which one has a visible stroke */
+.theme-toggle .icon { grid-area: 1 / 1; }
+.theme-toggle .icon-moon { color: light-dark(currentColor, transparent); }
+.theme-toggle .icon-sun { color: light-dark(transparent, currentColor); }
 
 /* ---------- main column ---------- */
 .main {
@@ -213,12 +211,8 @@
 .hero h1 { font-size: var(--text-display); }
 .hero__line { display: block; }
 .hero__accent {
-  /* yellow as a highlighter in light mode: yellow type on white fails contrast */
-  background: linear-gradient(transparent 62%, var(--color-accent) 62%, var(--color-accent) 92%, transparent 92%);
-}
-[data-mode="dark"] .hero__accent { background: none; color: var(--color-accent); }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-mode]) .hero__accent { background: none; color: var(--color-accent); }
+  color: var(--accent-word-color);
+  background: linear-gradient(transparent 62%, var(--accent-word-mark) 62%, var(--accent-word-mark) 92%, transparent 92%);
 }
 .hero__lead {
   margin-top: var(--space-lg);
@@ -380,14 +374,14 @@
 
 /* ---------- phone: one column, rail as a bottom bar ---------- */
 @media (max-width: 767px) {
-  .shell { padding-bottom: 72px; }
+  .shell { padding-bottom: var(--bottom-bar); }
   .rail {
     position: fixed;
     inset: auto 0 0 0;
     top: auto;
     flex-direction: row;
     justify-content: space-around;
-    padding: 6px var(--space-xs) calc(6px + env(safe-area-inset-bottom));
+    padding: 6px var(--space-xs);
     border-bottom: 0;
     border-top: 1px solid var(--color-rule);
   }
