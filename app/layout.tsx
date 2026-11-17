@@ -26,7 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={sans.variable}>
+    // the inline script sets data-mode before hydration, so this attribute differs on purpose
+    <html lang="en" className={sans.variable} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{

@@ -1,6 +1,9 @@
 export type Lang = "en" | "vi";
 
 type Job = { role: string; org: string; years: string };
+type Fact = { label: string; value: string };
+type SkillGroup = { name: string; items: string[] };
+type Language = { name: string; level: string };
 
 export type Content = {
   lang: Lang;
@@ -9,15 +12,26 @@ export type Content = {
   skip: string;
   backToTop: string;
   navLabel: string;
-  nav: { experience: string; contact: string; email: string };
+  nav: { home: string; about: string; experience: string; contact: string };
   switchTo: { href: string; label: string; name: string; lang: Lang };
   themeLabel: string;
   role: string;
+  shortRole: string;
+  hello: string;
+  heroLine: { accent: string; rest: string };
   lead: string;
   emailMe: string;
-  about: { heading: string; paragraphs: string[]; focus: string };
+  about: { heading: string; paragraphs: string[] };
+  profile: {
+    label: string;
+    facts: Fact[];
+    skillsHeading: string;
+    skills: SkillGroup[];
+    languagesHeading: string;
+    languages: Language[];
+  };
   experience: { heading: string; jobs: Job[] };
-  contact: { heading: string; note: string };
+  contact: { heading: string; phone: string; note: string };
   city: string;
 };
 
@@ -29,10 +43,13 @@ export const en: Content = {
   skip: "Skip to content",
   backToTop: "Dung Phan, back to top",
   navLabel: "Primary",
-  nav: { experience: "Experience", contact: "Contact", email: "Email" },
+  nav: { home: "Home", about: "About", experience: "Experience", contact: "Contact" },
   switchTo: { href: "/vi/", label: "VI", name: "Tiếng Việt", lang: "vi" },
   themeLabel: "Toggle dark mode",
   role: "Technical Lead, Cloud Expense at Money Forward",
+  shortRole: "Technical Lead, Cloud Expense",
+  hello: "I'm Dung Phan",
+  heroLine: { accent: "Technical Lead", rest: " at Money Forward" },
   lead: "I build teams from zero and ship top-revenue cloud products.",
   emailMe: "Email me",
   about: {
@@ -41,8 +58,27 @@ export const en: Content = {
       "I am a technical lead at Money Forward Vietnam. I joined in July 2023 to lead Account Payable, and built that team from zero to more than ten engineers. In September 2025 I started the EX MFV team for Cloud Expense and lead it with Money Forward Group in Japan. We are five developers now.",
       "Both products sit at the top of Money Forward Group revenue. I work best in small teams, with clear writing and long stretches of focus.",
     ],
-    focus:
-      "Ruby on Rails, React, Next.js, TypeScript, AWS, microservices, team leadership.",
+  },
+  profile: {
+    label: "Profile",
+    facts: [
+      { label: "Based in", value: "Ho Chi Minh City" },
+      { label: "Company", value: "Money Forward Vietnam" },
+      { label: "Building since", value: "2012" },
+      { label: "Hiring", value: "Principal Engineers" },
+    ],
+    skillsHeading: "Skills",
+    skills: [
+      { name: "Backend", items: ["Ruby on Rails", "Node.js", "PostgreSQL", "Microservices"] },
+      { name: "Frontend", items: ["React", "Next.js", "TypeScript", "Vue"] },
+      { name: "Cloud", items: ["AWS"] },
+      { name: "Leadership", items: ["Team building", "Hiring", "Scrum"] },
+    ],
+    languagesHeading: "Languages",
+    languages: [
+      { name: "Vietnamese", level: "Native" },
+      { name: "English", level: "Working" },
+    ],
   },
   experience: {
     heading: "Experience",
@@ -59,6 +95,7 @@ export const en: Content = {
   },
   contact: {
     heading: "Contact",
+    phone: "Phone",
     note: "Ho Chi Minh City, Vietnam. We are growing the team for Cloud Expense and looking for Principal Engineers.",
   },
   city: "Ho Chi Minh City, Vietnam",
@@ -72,10 +109,13 @@ export const vi: Content = {
   skip: "Bỏ qua đến nội dung",
   backToTop: "Dung Phan, về đầu trang",
   navLabel: "Điều hướng chính",
-  nav: { experience: "Kinh nghiệm", contact: "Liên hệ", email: "Email" },
+  nav: { home: "Trang chủ", about: "Giới thiệu", experience: "Kinh nghiệm", contact: "Liên hệ" },
   switchTo: { href: "/", label: "EN", name: "English", lang: "en" },
   themeLabel: "Bật/tắt chế độ tối",
   role: "Technical Lead, Cloud Expense tại Money Forward",
+  shortRole: "Technical Lead, Cloud Expense",
+  hello: "Tôi là Dung Phan",
+  heroLine: { accent: "Technical Lead", rest: " tại Money Forward" },
   lead: "Tôi xây dựng đội ngũ từ con số không và phát triển những sản phẩm cloud dẫn đầu doanh thu.",
   emailMe: "Gửi email",
   about: {
@@ -84,8 +124,27 @@ export const vi: Content = {
       "Tôi là technical lead tại Money Forward Vietnam. Tôi gia nhập vào tháng 7/2023 để dẫn dắt Account Payable và xây dựng đội từ con số không lên hơn mười kỹ sư. Tháng 9/2025, tôi lập đội EX MFV cho Cloud Expense và cùng Money Forward Group tại Nhật Bản dẫn dắt đội. Hiện đội có năm lập trình viên.",
       "Cả hai sản phẩm đều thuộc nhóm dẫn đầu doanh thu của Money Forward Group. Tôi làm việc tốt nhất trong đội nhỏ, viết rõ ràng và có những khoảng thời gian dài để tập trung.",
     ],
-    focus:
-      "Ruby on Rails, React, Next.js, TypeScript, AWS, microservices, lãnh đạo đội ngũ.",
+  },
+  profile: {
+    label: "Hồ sơ",
+    facts: [
+      { label: "Sống tại", value: "TP. Hồ Chí Minh" },
+      { label: "Công ty", value: "Money Forward Vietnam" },
+      { label: "Đi làm từ", value: "2012" },
+      { label: "Đang tuyển", value: "Principal Engineer" },
+    ],
+    skillsHeading: "Kỹ năng",
+    skills: [
+      { name: "Backend", items: ["Ruby on Rails", "Node.js", "PostgreSQL", "Microservices"] },
+      { name: "Frontend", items: ["React", "Next.js", "TypeScript", "Vue"] },
+      { name: "Cloud", items: ["AWS"] },
+      { name: "Lãnh đạo", items: ["Xây dựng đội", "Tuyển dụng", "Scrum"] },
+    ],
+    languagesHeading: "Ngôn ngữ",
+    languages: [
+      { name: "Tiếng Việt", level: "Bản ngữ" },
+      { name: "Tiếng Anh", level: "Làm việc" },
+    ],
   },
   experience: {
     heading: "Kinh nghiệm",
@@ -102,6 +161,7 @@ export const vi: Content = {
   },
   contact: {
     heading: "Liên hệ",
+    phone: "Điện thoại",
     note: "TP. Hồ Chí Minh, Việt Nam. Chúng tôi đang mở rộng đội Cloud Expense và tìm kiếm Principal Engineer.",
   },
   city: "TP. Hồ Chí Minh, Việt Nam",
