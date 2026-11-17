@@ -8,6 +8,12 @@
 :root {
   --container: 920px;
 }
+/* Vietnamese page: General Sans lacks many Vietnamese glyphs */
+div[lang="vi"] {
+  --font-display: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-display);
+  font-family: var(--font-body);
+}
 
 /* chrome */
 .skip {

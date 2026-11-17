@@ -20,6 +20,14 @@ export function homeMetadata(t: Content): Metadata {
 export default function Home({ t }: { t: Content }) {
   return (
     <div lang={t.lang}>
+      {t.lang === "vi" && (
+        // General Sans lacks many Vietnamese glyphs (ặ, ộ, ữ...); React hoists this into <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+          precedence="default"
+        />
+      )}
       <a className="skip" href="#main">
         {t.skip}
       </a>
