@@ -121,9 +121,26 @@ div[lang="vi"] {
   border-color: var(--color-accent-2);
 }
 
+/* text links: stretch the hit area to ~44px tall without moving the layout */
+.brand,
+.nav__links a,
+.quiet,
+.contact__links a {
+  position: relative;
+}
+.brand::before,
+.nav__links a::before,
+.quiet::before,
+.contact__links a::before {
+  content: "";
+  position: absolute;
+  inset: -14px -8px;
+}
+
 /* hero */
+/* fluid: ~56px top / 64px bottom on a 320px phone, 144px / 96px on wide desktop */
 .hero {
-  padding-block: var(--space-4xl) var(--space-3xl);
+  padding-block: clamp(3.5rem, 2rem + 8vw, 9rem) clamp(4rem, 2.5rem + 4vw, 6rem);
 }
 .hero h1 {
   font-size: var(--text-display-s);
@@ -154,9 +171,10 @@ div[lang="vi"] {
 .section + .section {
   padding-top: 0;
 }
+/* fluid: 24px on phones (well under the 36px name), 31px on desktop */
 .section h2 {
-  font-size: var(--text-2xl);
-  margin-bottom: var(--space-xl);
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, var(--text-2xl));
+  margin-bottom: clamp(1.5rem, 1rem + 2vw, 2.5rem);
 }
 
 /* about */
@@ -258,9 +276,6 @@ div[lang="vi"] {
 
 /* responsive */
 @media (max-width: 40rem) {
-  .hero {
-    padding-bottom: var(--space-2xl);
-  }
   .nav__links a:not(.nav__email) {
     display: none;
   }
