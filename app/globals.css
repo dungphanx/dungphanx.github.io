@@ -8,6 +8,12 @@
 :root {
   --container: 920px;
 }
+/* Vietnamese page: General Sans lacks many Vietnamese glyphs */
+div[lang="vi"] {
+  --font-display: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-display);
+  font-family: var(--font-body);
+}
 
 /* chrome */
 .skip {
@@ -282,6 +288,29 @@
   color: var(--color-ink-2);
   cursor: pointer;
   transition: color var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out);
+}
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding-inline: var(--space-xs);
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-pill);
+  color: var(--color-ink-2);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out);
+}
+.lang-switch:hover {
+  color: var(--color-ink);
+  border-color: var(--color-rule-2);
+}
+.lang-switch:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
 }
 .theme-toggle:hover {
   color: var(--color-ink);

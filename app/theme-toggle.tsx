@@ -1,6 +1,6 @@
 "use client";
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ label }: { label: string }) {
   function toggle() {
     const root = document.documentElement;
     const next = root.dataset.mode === "dark" ? "light" : "dark";
@@ -16,7 +16,7 @@ export default function ThemeToggle() {
     <button
       type="button"
       className="theme-toggle"
-      aria-label="Toggle dark mode"
+      aria-label={label}
       onClick={toggle}
     >
       <svg
