@@ -58,8 +58,8 @@ export const en: Content = {
     heading: "About",
     paragraphs: [
       "I am a technical lead at Money Forward Vietnam. I joined in July 2023 to lead Account Payable, and built that team from zero to more than ten engineers. In September 2025 I started the EX MFV team for Cloud Expense and lead it with Money Forward Group in Japan. We are five developers now.",
-      "Before that I spent ten years in teams across Singapore, Switzerland and Vietnam: a cryptocurrency exchange at Coinhako, logistics port systems at Symphony, high-traffic databases at Asian Live Tech, and my first product at Ciiva.",
       "Both products sit at the top of Money Forward Group revenue. I work best in small teams, with clear writing and long stretches of focus.",
+      "Before that I spent ten years in teams across Singapore, Switzerland and Vietnam: a cryptocurrency exchange at Coinhako, logistics port systems at Symphony, high-traffic databases at Asian Live Tech, and my first product at Ciiva.",
     ],
   },
   profile: {
@@ -205,8 +205,8 @@ export const vi: Content = {
     heading: "Giới thiệu",
     paragraphs: [
       "Tôi là technical lead tại Money Forward Vietnam. Tôi gia nhập vào tháng 7/2023 để dẫn dắt Account Payable và xây dựng đội từ con số không lên hơn mười kỹ sư. Tháng 9/2025, tôi lập đội EX MFV cho Cloud Expense và cùng Money Forward Group tại Nhật Bản dẫn dắt đội. Hiện đội có năm lập trình viên.",
-      "Trước đó, tôi có mười năm làm việc trong các đội ở Singapore, Thụy Sĩ và Việt Nam: sàn giao dịch tiền mã hoá ở Coinhako, hệ thống cảng logistics ở Symphony, cơ sở dữ liệu lưu lượng lớn ở Asian Live Tech, và sản phẩm đầu tiên ở Ciiva.",
       "Cả hai sản phẩm đều thuộc nhóm dẫn đầu doanh thu của Money Forward Group. Tôi làm việc tốt nhất trong đội nhỏ, viết rõ ràng và có những khoảng thời gian dài để tập trung.",
+      "Trước đó, tôi có mười năm làm việc trong các đội ở Singapore, Thụy Sĩ và Việt Nam: sàn giao dịch tiền mã hoá ở Coinhako, hệ thống cảng logistics ở Symphony, cơ sở dữ liệu lưu lượng lớn ở Asian Live Tech, và sản phẩm đầu tiên ở Ciiva.",
     ],
   },
   profile: {
