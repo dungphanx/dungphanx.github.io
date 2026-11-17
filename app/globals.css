@@ -287,6 +287,35 @@
 }
 .job__role { margin-top: var(--space-xs); font-weight: 600; font-size: var(--text-lg); line-height: 1.35; }
 .job__org { color: var(--color-muted); font-size: var(--text-sm); }
+.job__points {
+  margin-top: var(--space-sm);
+  padding-left: 1.1em;
+  max-width: 68ch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  color: var(--color-ink-2);
+  list-style: disc;
+}
+.job__points li::marker { color: var(--color-accent); }
+.job__award {
+  margin-top: var(--space-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 2px var(--space-sm) 2px var(--space-xs);
+  border-radius: 2px;
+  background: var(--color-sunk);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+.job__award .icon { color: var(--color-accent); flex: none; }
+
+/* education */
+.block__sub { margin-top: var(--space-md); font-size: var(--text-lg); }
+.education { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: var(--space-md); }
+.school { padding: var(--space-lg); }
+.school__note { margin-top: var(--space-xs); color: var(--color-ink-2); font-size: var(--text-sm); }
 
 /* contact */
 .contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: var(--space-md); }

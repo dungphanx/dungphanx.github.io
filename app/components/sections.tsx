@@ -57,9 +57,31 @@ export function Experience({ t }: { t: Content }) {
             <span className="job__year num">{job.years}</span>
             <p className="job__role">{job.role}</p>
             <p className="job__org">{job.org}</p>
+            <ul className="job__points">
+              {job.points.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ul>
+            {job.award && (
+              <p className="job__award">
+                <Icon name="award" />
+                <span>{job.award}</span>
+              </p>
+            )}
           </li>
         ))}
       </ol>
+      <h3 className="block__sub">{t.education.heading}</h3>
+      <ul className="education">
+        {t.education.schools.map((s) => (
+          <li className="card school" key={s.name}>
+            <span className="job__year num">{s.years}</span>
+            <p className="job__role">{s.name}</p>
+            <p className="job__org">{s.detail}</p>
+            {s.note && <p className="school__note">{s.note}</p>}
+          </li>
+        ))}
+      </ul>
     </Block>
   );
 }
