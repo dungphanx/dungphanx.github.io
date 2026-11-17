@@ -6,7 +6,7 @@
 @import url("./base.css");
 
 :root {
-  --container: 920px;
+  --container: 820px;
 }
 /* Vietnamese page: General Sans lacks many Vietnamese glyphs */
 div[lang="vi"] {
@@ -162,7 +162,8 @@ div[lang="vi"] {
 /* about */
 .about p {
   color: var(--color-ink-2);
-  max-width: 64ch;
+  /* the narrow container keeps lines readable; every block shares its width */
+  max-width: none;
 }
 .about p + p {
   margin-top: var(--space-md);
@@ -239,7 +240,6 @@ div[lang="vi"] {
 .contact__note {
   font-size: var(--text-sm);
   color: var(--color-muted);
-  max-width: 52ch;
 }
 
 /* footer */
