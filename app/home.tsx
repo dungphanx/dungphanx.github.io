@@ -19,7 +19,7 @@ export function homeMetadata(t: Content): Metadata {
 export default function Home({ t }: { t: Content }) {
   return (
     <div className="shell" lang={t.lang}>
-      <a className="skip" href="#main">
+      <a className="skip" href="#top">
         {t.skip}
       </a>
       <RailBar t={t} />
