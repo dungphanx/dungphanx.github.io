@@ -374,7 +374,19 @@
 
 /* ---------- phone: one column, rail as a bottom bar ---------- */
 @media (max-width: 767px) {
-  .shell { padding-bottom: var(--bottom-bar); }
+  /* Hero first: <main> lets its sections join the shell grid so the profile
+     card can sit between the hero and About. No DOM change, so wider layouts
+     are untouched. A display:contents box cannot be scrolled to, hence the
+     skip link targets #top. */
+  .shell {
+    grid-template-areas: none;
+    gap: var(--space-xl);
+    padding: var(--space-lg) var(--space-md) calc(var(--bottom-bar) + var(--space-lg));
+  }
+  .main { display: contents; }
+  .main > * { order: 3; }
+  .main > .hero { order: 1; }
+  .sidebar { grid-area: auto; order: 2; border-radius: var(--radius-card); }
   .rail {
     position: fixed;
     inset: auto 0 0 0;
@@ -392,13 +404,12 @@
   .rail__label { opacity: 0; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .main > section { scroll-margin-top: var(--space-lg); }
 
-  .sidebar { grid-template-columns: minmax(0, 1fr); padding: var(--space-xl) var(--space-md); }
+  .sidebar { grid-template-columns: minmax(0, 1fr); padding: var(--space-lg); }
   .sidebar__id { grid-template-columns: auto minmax(0, 1fr); gap: var(--space-md); }
   .sidebar__id .socials { grid-column: 1 / -1; }
   .avatar { width: 80px; height: 80px; }
   .facts + .side-block { padding-top: var(--space-lg); border-top: 1px solid var(--color-rule); }
 
-  .main { padding: var(--space-lg) var(--space-md); gap: var(--space-xl); }
   .card { padding: var(--space-lg); }
   .hero { padding: var(--space-xl) var(--space-lg); }
   .btn { flex: 1 1 auto; }
