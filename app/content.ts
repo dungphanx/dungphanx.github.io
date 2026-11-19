@@ -22,6 +22,7 @@ export type Content = {
   heroLine: { accent: string; rest: string };
   lead: string;
   emailMe: string;
+  cv: { download: string; file: string; summary: string; back: string; pdf: string };
   about: { heading: string; paragraphs: string[] };
   profile: {
     label: string;
@@ -54,6 +55,13 @@ export const en: Content = {
   heroLine: { accent: "Technical Lead", rest: " at Money Forward" },
   lead: "I build teams from zero and ship top-revenue cloud products.",
   emailMe: "Email me",
+  cv: {
+    download: "Download CV",
+    file: "/dung-phan-cv.pdf",
+    summary: "Summary",
+    back: "Back to the site",
+    pdf: "Download PDF",
+  },
   about: {
     heading: "About",
     paragraphs: [
@@ -201,6 +209,13 @@ export const vi: Content = {
   heroLine: { accent: "Technical Lead", rest: " tại Money Forward" },
   lead: "Tôi xây dựng đội ngũ từ con số không và phát triển những sản phẩm cloud dẫn đầu doanh thu.",
   emailMe: "Gửi email",
+  cv: {
+    download: "Tải CV",
+    file: "/dung-phan-cv-vi.pdf",
+    summary: "Tóm tắt",
+    back: "Về trang chính",
+    pdf: "Tải PDF",
+  },
   about: {
     heading: "Giới thiệu",
     paragraphs: [
