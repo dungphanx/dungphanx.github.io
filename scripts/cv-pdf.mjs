@@ -1,4 +1,5 @@
-// Prints the CV pages of the static export (out/) to PDF with headless Chrome.
+// Prints the CV pages (/resume/, /vi/resume/) of the static export (out/) to PDF with headless Chrome.
+// (/cv/ would clash with the dungphanx/cv repo, whose Pages site owns that path.)
 // Runs after `next build`; fails the build when a PDF cannot be made, so the
 // "Download CV" button never points at a missing file. No npm dependencies.
 // The PDFs exist only in out/, so the button returns 404 under `next dev`.
@@ -13,8 +14,8 @@ import { promisify } from "node:util";
 const run = promisify(execFile);
 const OUT = path.resolve("out");
 const PAGES = [
-  { url: "/cv/", file: "dung-phan-cv.pdf" },
-  { url: "/vi/cv/", file: "dung-phan-cv-vi.pdf" },
+  { url: "/resume/", file: "dung-phan-cv.pdf" },
+  { url: "/vi/resume/", file: "dung-phan-cv-vi.pdf" },
 ];
 const TYPES = {
   ".html": "text/html; charset=utf-8",
