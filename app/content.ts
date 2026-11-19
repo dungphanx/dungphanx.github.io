@@ -22,7 +22,7 @@ export type Content = {
   heroLine: { accent: string; rest: string };
   lead: string;
   emailMe: string;
-  cv: { download: string; file: string; title: string; summary: string; back: string; pdf: string };
+  cv: { download: string; file: string; summary: string; back: string; pdf: string };
   about: { heading: string; paragraphs: string[] };
   profile: {
     label: string;
@@ -58,7 +58,6 @@ export const en: Content = {
   cv: {
     download: "Download CV",
     file: "/dung-phan-cv.pdf",
-    title: "Dung Phan — CV",
     summary: "Summary",
     back: "Back to the site",
     pdf: "Download PDF",
@@ -213,7 +212,6 @@ export const vi: Content = {
   cv: {
     download: "Tải CV",
     file: "/dung-phan-cv-vi.pdf",
-    title: "Dung Phan — CV",
     summary: "Tóm tắt",
     back: "Về trang chính",
     pdf: "Tải PDF",

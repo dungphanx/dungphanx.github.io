@@ -3,10 +3,12 @@ import type { Content } from "./content";
 import { contactLinks, SITE } from "./links";
 import "./cv.css";
 
+const TITLE = "Dung Phan — CV";
+
 // The CV page is only the source of the PDF; search engines should find the home page instead.
 export function cvMetadata(t: Content): Metadata {
   return {
-    title: t.cv.title,
+    title: TITLE,
     description: t.description,
     robots: { index: false, follow: true },
     alternates: { canonical: t.lang === "en" ? `${SITE}/` : `${SITE}/vi/` },
@@ -23,7 +25,7 @@ export default function Cv({ t }: { t: Content }) {
   const home = t.lang === "en" ? "/" : "/vi/";
   return (
     <div className="cv-page" lang={t.lang}>
-      <nav className="cv-toolbar" aria-label="CV">
+      <nav className="cv-toolbar" aria-label={TITLE}>
         <a href={home}>← {t.cv.back}</a>
         <a href={t.cv.file} download>
           {t.cv.pdf}

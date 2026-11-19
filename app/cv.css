@@ -27,6 +27,9 @@
   background: #fff;
   color: #1a1b1e;
   font-size: 9.5pt;
+  /* keep the accent bars when someone prints this page with background graphics off */
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
   line-height: 1.45;
   border-radius: var(--radius-card);
 }

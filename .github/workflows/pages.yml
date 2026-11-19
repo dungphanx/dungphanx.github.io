@@ -10,11 +10,12 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 jobs:
   build:
+    permissions:
+      contents: read
+      pages: read  # configure-pages reads the site settings
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -43,11 +44,24 @@ jobs:
         run: pnpm build
 
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
+      # on PRs keep only the PDFs, to check how they print on Linux
+      - name: Upload CV PDFs
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdf
+          path: out/dung-phan-cv*.pdf
+          retention-days: 7
+
   deploy:
+    permissions:
+      pages: write
+      id-token: write
     if: github.event_name != 'pull_request'
     concurrency:
       group: "pages"

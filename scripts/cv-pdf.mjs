@@ -1,6 +1,7 @@
 // Prints the CV pages of the static export (out/) to PDF with headless Chrome.
 // Runs after `next build`; fails the build when a PDF cannot be made, so the
 // "Download CV" button never points at a missing file. No npm dependencies.
+// The PDFs exist only in out/, so the button returns 404 under `next dev`.
 import { execFile } from "node:child_process";
 import { existsSync } from "node:fs";
 import { mkdtemp, readFile, rm, stat } from "node:fs/promises";
@@ -48,7 +49,7 @@ function serve() {
     try {
       const pathname = decodeURIComponent(new URL(req.url, "http://x").pathname);
       let file = path.join(OUT, pathname);
-      if (!file.startsWith(OUT)) throw new Error("outside out/");
+      if (!file.startsWith(OUT + path.sep)) throw new Error("outside out/");
       if (pathname.endsWith("/")) file = path.join(file, "index.html");
       const body = await readFile(file);
       res.writeHead(200, { "content-type": TYPES[path.extname(file)] ?? "application/octet-stream" });
