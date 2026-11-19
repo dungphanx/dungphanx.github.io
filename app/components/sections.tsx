@@ -17,6 +17,10 @@ export function Hero({ t }: { t: Content }) {
         <a className="btn" href={EMAIL}>
           {t.emailMe}
         </a>
+        <a className="btn btn--ghost" href={t.cv.file} download>
+          <Icon name="download" />
+          {t.cv.download}
+        </a>
         <a className="btn btn--ghost" href={LINKEDIN} rel="noreferrer">
           LinkedIn
         </a>

@@ -3,16 +3,15 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: ["main"]
+  # build only, so a PR proves the site and the CV PDFs still build; deploy stays on main
+  pull_request:
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
 
 jobs:
   build:
@@ -33,11 +32,13 @@ jobs:
           cache: "pnpm"
 
       - name: Setup Pages
+        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      # also prints the CV pages to out/dung-phan-cv*.pdf with the runner's Chrome
       - name: Build
         run: pnpm build
 
@@ -47,6 +48,10 @@ jobs:
           path: ./out
 
   deploy:
+    if: github.event_name != 'pull_request'
+    concurrency:
+      group: "pages"
+      cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

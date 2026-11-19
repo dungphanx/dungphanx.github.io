@@ -48,6 +48,13 @@ const paths = {
       <circle cx="12" cy="9" r="2.5" />
     </>
   ),
+  download: (
+    <>
+      <path d="M12 4v11" />
+      <path d="m7 10 5 5 5-5" />
+      <path d="M5 20h14" />
+    </>
+  ),
   award: (
     <>
       <circle cx="12" cy="9" r="6" />
