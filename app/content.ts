@@ -65,7 +65,7 @@ export const en: Content = {
   about: {
     heading: "About",
     paragraphs: [
-      "I am a technical lead at Money Forward Vietnam. I joined in July 2023 to lead Account Payable, and built that team from zero to more than ten engineers. In September 2025 I started the EX MFV team for Cloud Expense and lead it with Money Forward Group in Japan. We are five developers now.",
+      "I am a technical lead at Money Forward Vietnam. I joined in July 2023 to lead Account Payable, and built that team from zero to more than ten engineers. In September 2025 I started the EX MFV team for Cloud Expense and lead it with Money Forward Group in Japan. We are five developers now. I also lead the Backend Chapter of Cloud Expense: all fifteen backend developers of the project, from several unit teams, designing solutions together to raise our productivity.",
       "Both products sit at the top of Money Forward Group revenue. I work best in small teams, with clear writing and long stretches of focus.",
       "Before Money Forward I spent ten years in teams across Singapore, Switzerland and Vietnam: a cryptocurrency exchange at Coinhako, logistics port systems at Symphony, high-traffic databases at Asian Live Tech, and my first product at Ciiva.",
     ],
@@ -95,11 +95,12 @@ export const en: Content = {
     heading: "Experience",
     jobs: [
       {
-        role: "Technical Lead, Cloud Expense",
+        role: "Technical Lead and Backend Chapter Lead, Cloud Expense",
         org: "Money Forward Vietnam",
         years: "Sep 2025 to now",
         points: [
           "Started the EX MFV team for Cloud Expense and lead it together with Money Forward Group in Japan. Five developers so far.",
+          "Lead the Backend Chapter: all 15 backend developers of the project, from several unit teams. Together we design solutions that raise the productivity of our everyday work.",
         ],
       },
       {
@@ -219,7 +220,7 @@ export const vi: Content = {
   about: {
     heading: "Giới thiệu",
     paragraphs: [
-      "Tôi là technical lead tại Money Forward Vietnam. Tôi gia nhập vào tháng 7/2023 để dẫn dắt Account Payable và xây dựng đội từ con số không lên hơn mười kỹ sư. Tháng 9/2025, tôi lập đội EX MFV cho Cloud Expense và cùng Money Forward Group tại Nhật Bản dẫn dắt đội. Hiện đội có năm lập trình viên.",
+      "Tôi là technical lead tại Money Forward Vietnam. Tôi gia nhập vào tháng 7/2023 để dẫn dắt Account Payable và xây dựng đội từ con số không lên hơn mười kỹ sư. Tháng 9/2025, tôi lập đội EX MFV cho Cloud Expense và cùng Money Forward Group tại Nhật Bản dẫn dắt đội. Hiện đội có năm lập trình viên. Tôi cũng dẫn dắt Backend Chapter của Cloud Expense: toàn bộ mười lăm lập trình viên backend của dự án, đến từ nhiều unit team, cùng nhau thiết kế giải pháp để nâng cao năng suất làm việc.",
       "Cả hai sản phẩm đều thuộc nhóm dẫn đầu doanh thu của Money Forward Group. Tôi làm việc tốt nhất trong đội nhỏ, viết rõ ràng và có những khoảng thời gian dài để tập trung.",
       "Trước Money Forward, tôi có mười năm làm việc trong các đội ở Singapore, Thụy Sĩ và Việt Nam: sàn giao dịch tiền mã hoá ở Coinhako, hệ thống cảng logistics ở Symphony, cơ sở dữ liệu lưu lượng lớn ở Asian Live Tech, và sản phẩm đầu tiên ở Ciiva.",
     ],
@@ -249,11 +250,12 @@ export const vi: Content = {
     heading: "Kinh nghiệm",
     jobs: [
       {
-        role: "Technical Lead, Cloud Expense",
+        role: "Technical Lead và Backend Chapter Lead, Cloud Expense",
         org: "Money Forward Vietnam",
         years: "09/2025 đến nay",
         points: [
           "Lập đội EX MFV cho Cloud Expense và cùng Money Forward Group tại Nhật Bản dẫn dắt đội. Hiện có năm lập trình viên.",
+          "Dẫn dắt Backend Chapter: toàn bộ 15 lập trình viên backend của dự án, đến từ nhiều unit team. Chúng tôi cùng nhau thiết kế giải pháp để nâng cao năng suất trong công việc hằng ngày.",
         ],
       },
       {
